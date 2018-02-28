@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
+
+h1 {
+  font-size: 6rem !important;
+  font-weight: 700; }
+
+h2 {
+  font-size: 5rem !important;
+  font-weight: 900;
+  color: orangered; }
+
+h3 {
+  font-size: 4rem !important;
+  font-weight: 300; }
+
+h4 {
+  font-size: 3rem !important;
+  font-weight: 400; }
+
+h5 {
+  font-size: 1.5rem !important;
+  font-weight: 300; }
+
+h6 {
+  font-size: 1.25rem !important;
+  font-weight: 100; }
+
+.header {
+  background-image: url("../img/standing_go.jpeg");
+  line-height: 1; }
+  .header__verbiage {
+    padding: 10rem 50rem 0 10rem; }
+  .header__subhead {
+    margin: 3rem 0 0 11rem;
+    border-top: 1px solid lightblue;
+    padding-top: 2rem;
+    max-width: 60rem; }
+
+.why {
+  padding: 5rem;
+  background-image: linear-gradient(to bottom right, #fff, #f7f7f7);
+  color: black; }
+  .why img {
+    height: 15rem; }
+  .why__main {
+    display: flex; }
+  .why__intro {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 2rem; }
+  .why__subhead {
+    display: flex; }
+  .why__content {
+    flex: 0 0 60%; }
+    .why__content__header {
+      display: flex;
+      padding: 1rem 0;
+      border-bottom: 1px solid grey; }
+    .why__content__left {
+      flex: 0 0 50%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center; }
+    .why__content__right {
+      flex: 0 0 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .why__content__issue {
+      display: flex;
+      margin: 2rem;
+      border-radius: 3px;
+      background-color: #f9f9f4; }
+
+.myJob {
+  padding: 5rem 5rem 15rem 5rem;
+  background-color: #f1f1f1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Capitol_Building_Full_View.jpg");
+  background-position: center;
+  background-size: cover; }
+  .myJob:before {
+    background-image: linear-gradient(to bottom right, #002f4b, #dc4225); }
+  .myJob__title {
+    display: flex;
+    justify-content: center; }
+  .myJob__subhead {
+    text-align: center;
+    padding: 0 15rem;
+    margin-bottom: 5rem; }
+  .myJob hr {
+    width: 15%;
+    margin: -5px auto 2rem auto;
+    background-color: orangered; }
+  .myJob__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .myJob__box {
+    height: 20rem;
+    margin-bottom: 2rem;
+    flex: 0 0 30%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
+    .myJob__box__title {
+      display: flex; }
+
+.howWhat__title {
+  text-align: center;
+  margin-top: 10rem; }
+
+.howWhat__reason {
+  display: flex;
+  height: 30rem; }
+
+.howWhat__transparency {
+  background-image: url("../img/transparency-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  .howWhat__transparency::before {
+    content: "Transparency";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-family: 'Open sans', sans-serif;
+    color: orangered; }
+  .howWhat__transparency__verbiage {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 5rem;
+    transform: translatex(-50); }
+
+.howWhat__engagement {
+  background-image: url("../img/Stakeholder-Engagement.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  .howWhat__engagement::before {
+    content: "Engagement";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-family: 'Open sans', sans-serif;
+    color: orangered; }
+
+.howWhat__fundraising {
+  background-image: url("../img/fundraising_cut.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  .howWhat__fundraising::before {
+    content: "No Fundraising";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-family: 'Open sans', sans-serif;
+    color: orangered; }
+
+.howWhat__left {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center; }
+
+.howWhat__right {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center; }
+
+.content {
+  display: flex; }

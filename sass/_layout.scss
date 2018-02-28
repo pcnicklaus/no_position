@@ -1,0 +1,300 @@
+.container {
+
+}
+
+.header {
+    background-image: url('../img/standing_go.jpeg');
+    line-height: 1;
+
+    // height: 100vh;
+
+    &__verbiage {
+        padding: 10rem 50rem 0 10rem;
+    }
+
+    &__subhead {
+        margin: 3rem 0 0 11rem;
+        border-top: 1px solid lightblue;
+        padding-top: 2rem;
+        
+        // gotta figure out how to do this correctly... flex-basis? but i'm not flexboxing this sucker yet...
+        max-width: 60rem;
+    }
+}
+
+.why {
+    padding: 5rem;
+    background-image: linear-gradient(to bottom right,#fff, #f7f7f7);    
+    color: black;
+
+    img {
+        height: 15rem;
+    }
+
+    &__main {
+        display: flex;
+        // background-color: red;
+    }
+    &__intro {
+        flex: 0 0 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem 2rem;
+        // flex-direction: column;
+        // background-color:green;
+    }
+    &__title {
+        // display: flex;
+        // align-items: baseline;
+
+       
+    }
+
+    &__subhead {
+        display: flex
+    }
+
+    &__content {
+        flex: 0 0 60%;
+       
+        &__header {
+            display: flex;
+            padding: 1rem 0;
+            border-bottom: 1px solid grey;
+            // background-color: grey;
+        }
+
+        &__left {
+            flex: 0 0 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__right {
+            flex: 0 0 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+
+        &__issue {
+            display: flex;
+            margin: 2rem;
+            border-radius: 3px;
+            background-color: #f9f9f4
+
+        }
+        
+        
+    }
+
+}
+
+.myJob {
+    padding: 5rem 5rem 15rem 5rem;
+    background-color: #f1f1f1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,.5)), url('../img/Capitol_Building_Full_View.jpg');
+    background-position: center;
+    background-size: cover;
+
+
+    &:before {
+        background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__subhead {
+        text-align: center;
+        padding: 0 15rem;
+        margin-bottom: 5rem;
+    }
+
+    hr {
+        width: 15%;
+        margin: -5px auto 2rem auto;
+        background-color: orangered;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__box {
+        height: 20rem;
+        margin-bottom: 2rem;
+        flex: 0 0 30%;
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+
+        background-color: rgba(255,255,255,.7);
+        box-shadow: 0 5px 10px rgba(0,0,0,.5);
+
+
+
+        &__title {
+            display: flex;
+            // padding: 2rem;
+            
+            // justify-content: center;
+            // align-items: center;
+            // background-color: blue;
+            
+        }
+        
+        &__content {
+            // padding: 1rem;
+            // display: flex;
+            // justify-content: flex-end;
+        }
+    }
+}
+
+.howWhat {
+
+    &__title {
+        text-align: center;
+        margin-top: 10rem;
+    }
+
+    &__reason {
+        display: flex;
+        height: 30rem;
+    }
+
+    &__transparency {
+        background-image: url('../img/transparency-2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &::before {
+            content: "Transparency";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+            font-family: 'Open sans', sans-serif;
+            color: orangered;
+        }
+
+        
+        &__verbiage {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(255,255,255, .4);
+            padding: 5rem;
+            transform: translatex(-50);
+        }
+    }
+
+    &__engagement {
+        background-image: url('../img/Stakeholder-Engagement.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+
+        &::before {
+            content: "Engagement";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+            font-family: 'Open sans', sans-serif;
+            color: orangered;
+        }
+    }
+    
+
+    &__fundraising {
+        background-image: url('../img/fundraising_cut.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &::before {
+            content: "No Fundraising";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+            font-family: 'Open sans', sans-serif;
+            color: orangered;
+        }
+    }
+
+    &__left {
+        // background-color: orangered;
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__right {
+        // background-color: greenyellow;
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: center;
+    }  
+
+
+}
+
+
+// &__one {
+            
+//     background-image: url('../img/transparency-2.jpg');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+// &__two {
+    
+//     background-image: url('../img/Engagement-Sam-blog-10th-June-2015-760x665.jpg');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+// &__three {
+    
+//     background-image: url('../img/fundraising.jpg');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+
+.footer {
+
+}
+
+.content {
+    display: flex;
+}
+

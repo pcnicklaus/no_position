@@ -28,7 +28,7 @@
     color: black;
 
     img {
-        height: 15rem;
+        height: 10rem;
     }
 
     &__main {
@@ -42,14 +42,9 @@
         align-items: center;
         flex-direction: column;
         padding: 2rem 2rem;
-        // flex-direction: column;
-        // background-color:green;
     }
-    &__title {
-        // display: flex;
-        // align-items: baseline;
 
-       
+    &__title { 
     }
 
     &__subhead {
@@ -83,7 +78,7 @@
 
         &__issue {
             display: flex;
-            margin: 2rem;
+            margin: 2rem 0;
             border-radius: 3px;
             background-color: #f9f9f4
 
@@ -127,7 +122,9 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding: 5rem 10rem;
     }
+
     &__box {
         height: 20rem;
         margin-bottom: 2rem;
@@ -163,6 +160,8 @@
 
 .howWhat {
 
+    padding: 0 10rem 5rem 10rem;
+
     &__title {
         text-align: center;
         margin-top: 10rem;
@@ -170,7 +169,8 @@
 
     &__reason {
         display: flex;
-        height: 30rem;
+        min-height: 50rem;
+        min-width: 50rem;
     }
 
     &__transparency {
@@ -179,30 +179,30 @@
         background-repeat: no-repeat;
         position: relative;
 
-        &::before {
-            content: "Transparency";
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(255, 255, 255, 0.7);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 5rem;
-            font-family: 'Open sans', sans-serif;
-            color: orangered;
-        }
+        // &::before {
+        //     content: "Transparency";
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     background-color: rgba(255, 255, 255, 0.7);
+        //     width: 100%;
+        //     height: 100%;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     font-size: 5rem;
+        //     font-family: 'Open sans', sans-serif;
+        //     color: orangered;
+        // }
 
         
-        &__verbiage {
-            position: absolute;
-            top: 50%;
-            background-color: rgba(255,255,255, .4);
-            padding: 5rem;
-            transform: translatex(-50);
-        }
+        // &__verbiage {
+        //     position: absolute;
+        //     top: 50%;
+        //     background-color: rgba(255,255,255, .4);
+        //     padding: 5rem;
+        //     transform: translatex(-50);
+        // }
     }
 
     &__engagement {
@@ -212,21 +212,21 @@
         position: relative;
 
 
-        &::before {
-            content: "Engagement";
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(255, 255, 255, 0.7);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 5rem;
-            font-family: 'Open sans', sans-serif;
-            color: orangered;
-        }
+        // &::before {
+        //     content: "Engagement";
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     background-color: rgba(255, 255, 255, 0.7);
+        //     width: 100%;
+        //     height: 100%;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     font-size: 5rem;
+        //     font-family: 'Open sans', sans-serif;
+        //     color: orangered;
+        // }
     }
     
 
@@ -236,21 +236,21 @@
         background-repeat: no-repeat;
         position: relative;
 
-        &::before {
-            content: "No Fundraising";
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(255, 255, 255, 0.7);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 5rem;
-            font-family: 'Open sans', sans-serif;
-            color: orangered;
-        }
+        // &::before {
+        //     content: "No Fundraising";
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     background-color: rgba(255, 255, 255, 0.7);
+        //     width: 100%;
+        //     height: 100%;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     font-size: 5rem;
+        //     font-family: 'Open sans', sans-serif;
+        //     color: orangered;
+        // }
     }
 
     &__left {
@@ -265,11 +265,86 @@
         flex: 0 0 50%;
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        padding: 10rem;
     }  
 
 
 }
 
+.petition {
+    background-color: orange;
+    padding: 10rem 40rem;
+
+
+
+    &__header {
+
+        &__title {
+            
+        }
+
+        &__verbiage {
+
+        }
+    }
+    
+    // display: flex;
+    // flex-direction: column;
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+    &__content {
+        width: 100%;
+    }
+
+
+}
+
+.footer {
+    background-color: darkgray;
+    grid-column: full-start / full-end;
+    padding: 8rem;
+}
+
+.nav {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+
+    &__link:link,
+    &__link:visited {
+        font-size: 1.4rem;
+        color: #fff;
+        text-decoration: none;
+        // font-family: $font-display;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.5rem;
+        display: block;
+        transition: all .2s;
+    }
+
+    &__link:hover,
+    &__link:active {
+        background-color: rgba(#fff, .05);
+        transform: translateY(-3px);
+    }
+}
+
+.copyright {
+    font-size: 1.4rem;
+    color: lightgray;
+    margin-top: 6rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 70%;
+}
 
 // &__one {
             
@@ -290,11 +365,9 @@
 //     background-repeat: no-repeat;
 // }
 
-.footer {
 
-}
 
-.content {
-    display: flex;
-}
+// .content {
+//     display: flex;
+// }
 

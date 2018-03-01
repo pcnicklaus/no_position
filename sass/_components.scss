@@ -1,0 +1,280 @@
+.form {
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rbga(rgba(255,255,255, .5));
+        border: none;
+        border-bottom: 4px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all .3s;
+
+        // @include respond(tab-port) {
+        //     width: 100%;
+        // }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+            border-bottom: 4px solid purple;
+        }
+
+        &:focus:invalid {
+            border-bottom: 4px solid red;
+        }
+
+        &::-webkit-input-placeholder {
+            color: grey;
+        }
+    }
+
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    // &__input:placeholder-shown + &__label {
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transform: translateY(-4rem);
+
+    // }
+}
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 2rem;
+
+        //Change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    }
+    
+    &--white {
+        background-color: #fff;
+        color: darkgray;
+
+        &::after {
+            background-color: #fff;
+        }
+    }
+
+    &--green {
+        background-color: orangered;
+        color: #fff;
+
+        &::after {
+            background-color: orangered;
+        }
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: 2rem;
+        color: orangered;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid orangered;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: orangered;
+        color: #fff;
+        box-shadow: 0 1rem 2rem rgba(0,0,0, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0, .15);
+        transform: translateY(0);
+    }
+}
+
+
+.card {
+
+    // FUNCTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 23rem;
+    width: 28rem;
+    margin: .5rem;
+    
+    &__side {
+        height: 23rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba(0,0,0, .15);
+        background-color: crimson;
+
+        &--front {
+            background-color: #fff;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, orangered, orange);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, blue, darkblue);
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, lightgreen, green);
+            }
+        }
+    }
+  
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: rgb(77, 24, 24);
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    }
+
+    &__picture {
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100%;
+        background-blend-mode: screen;
+        
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        
+        &--1 {
+            background-image: url('../img/prepare.jpeg'), linear-gradient(to right bottom, lightgrey, darkgrey), 
+            url(../img/nat-5.jpg);
+        }
+
+        &--2 {
+            background-image: url('../img/listen.jpeg'), linear-gradient(to right bottom, lightgreen, darkgreen), 
+            url(../img/nat-6.jpg);
+        }
+
+        &--3 {
+            background-image: url('../img/unite.jpeg'), linear-gradient(to right bottom, cyan, magenta), 
+            url(../img/nat-7.jpg);
+        }
+
+        &--4 {
+            background-image: url('../img/interpret.jpg'), linear-gradient(to right bottom, cyan, magenta), 
+            url(../img/nat-7.jpg);
+        }
+
+        &--5 {
+            background-image: url('../img/fight.jpeg'), linear-gradient(to right bottom, cyan, magenta), 
+            url(../img/nat-7.jpg);
+        }
+
+        &--6 {
+            background-image: url('../img/review.jpeg'), linear-gradient(to right bottom, cyan, magenta), 
+            url(../img/nat-7.jpg);
+        }
+    }
+
+    &__details {
+        padding: 1rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                font-size: 1rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid lightgrey;
+                }
+            }
+        }
+    }
+
+}

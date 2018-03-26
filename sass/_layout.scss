@@ -6,10 +6,11 @@
     background-image: url('../img/standing_go.jpeg');
     line-height: 1;
 
-    // height: 100vh;
+    height: 100vh;
 
     &__verbiage {
         padding: 10rem 50rem 0 10rem;
+        
     }
 
     &__subhead {
@@ -23,16 +24,23 @@
 }
 
 .why {
-    padding: 5rem;
-    background-image: linear-gradient(to bottom right,#fff, #f7f7f7);    
-    color: black;
+    padding: 10rem 30rem;
+    // background-image: linear-gradient(to bottom right,#FF2562, #FF2562);    
+    background-image: linear-gradient(to bottom, #fff, transparent), url('../img/mic__reduced.jpeg'),  ;
+    // background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;   
 
     img {
-        height: 10rem;
+        height: 7rem;
+        margin: 1rem 0;
+        
     }
 
     &__main {
         display: flex;
+        flex-direction: column;
         // background-color: red;
     }
     &__intro {
@@ -42,17 +50,32 @@
         align-items: center;
         flex-direction: column;
         padding: 2rem 2rem;
+        background-color:rgba(237, 70, 48, 1);
+
     }
 
-    &__title { 
+    &__title {
+        font-size: 6rem !important;
+
+        // -webkit-text-stroke-width: .5px;
+        // -webkit-text-stroke-color: rgba(255, 255, 255, 0.336); 
     }
 
     &__subhead {
-        display: flex
+        display: flex;
+        flex: 0 0 50%;
     }
 
     &__content {
-        flex: 0 0 60%;
+        background-color: rgba(255,255,255, 0.5);
+        border-radius: 3px;
+        padding: 2rem 5rem;
+        color: darkslategrey;
+
+        &__box {
+            display: flex;
+            justify-content: space-between;
+        }
        
         &__header {
             display: flex;
@@ -62,28 +85,73 @@
         }
 
         &__left {
-            flex: 0 0 50%;
+            // flex: 0 0 50%;
             display: flex;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
+            // justify-content: center;
+            // flex-direction: column;
+            // text-align: center;
         }
 
-        &__right {
-            flex: 0 0 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }  
 
         &__issue {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             margin: 2rem 0;
             border-radius: 3px;
-            background-color: #f9f9f4
+            // background-color: #f9f9f4
+
+            &__issue {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h5 {
+                    font-size: 2rem !important;
+                }
+            }
+            &__position {
+                font-size: 2.2rem !important;
+                font-weight: 300;
+            }
 
         }
         
+        
+    }
+
+    &__outro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 5rem;
+
+        &__title {
+            // font-size: 3.5rem !important;
+            width: 100%;
+            padding: 2rem;
+            background-color:rgba(237, 70, 48, 1);
+            text-align: center;
+        }
+        &__content {
+
+            background-color: rgba(255,255,255, 0.5);
+            padding: 3rem 5rem;
+            // font-family: "Montserrat";
+            color: darkslategray;
+            width: 100%;
+
+            &__body {
+                font-size: 1.5rem !important;
+                // font-weight: 00;
+            }
+            &__body_two {
+    
+            }
+        }
         
     }
 
@@ -91,8 +159,10 @@
 
 .myJob {
     padding: 5rem 5rem 15rem 5rem;
-    background-color: #f1f1f1;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,.5)), url('../img/Capitol_Building_Full_View.jpg');
+    // background-color: #f1f1f1;
+    // background-image: linear-gradient(rgba(102, 199, 244, 1), rgba(102, 199, 244, .5)), url('../img/image__job.jpeg');
+
+    background-image: url('../img/image__job.jpeg');
     background-position: center;
     background-size: cover;
 
@@ -101,28 +171,30 @@
         background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
     }
 
-    &__title {
-        display: flex;
-        justify-content: center;
-    }
+    &__header {
+        background-color: rgba(255,255,255, 0.2);
+        margin: 0 25rem;
+        color: darkslategray;
 
-    &__subhead {
-        text-align: center;
-        padding: 0 15rem;
-        margin-bottom: 5rem;
-    }
-
-    hr {
-        width: 15%;
-        margin: -5px auto 2rem auto;
-        background-color: orangered;
+        &__title {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(108, 110, 160, 1);
+            color: white;
+            
+        }
+    
+        &__subhead {
+            text-align: center;
+            padding: 3rem 15rem;    
+        }
     }
 
     &__content {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 5rem 10rem;
+        padding: 5rem 21rem;
     }
 
     &__box {
@@ -160,7 +232,34 @@
 
 .howWhat {
 
-    padding: 0 10rem 5rem 10rem;
+    padding: 0 20rem 5rem 20rem;
+
+
+    &__intro {
+        margin: 5rem 10rem;
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            text-align: center;
+            background-color: rgba(108, 110, 160, 1);
+            color: white;
+            
+            &__verbiage {
+                padding: 3rem 0;
+            }
+        }
+    
+        &__subhead {
+            text-align: center;
+            padding: 3rem 15rem;
+            color: darkslategray;
+
+            background-color: rgba(255,255,255, 0.8);
+    
+        }
+    }
+
 
     &__title {
         text-align: center;
@@ -169,8 +268,12 @@
 
     &__reason {
         display: flex;
-        min-height: 50rem;
-        min-width: 50rem;
+        min-height: 40rem;
+        min-width: 30rem;   
+    }
+
+    &__last_one {
+        margin-top: -5rem;
     }
 
     &__transparency {
@@ -210,6 +313,8 @@
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
+        display: flex;
+        flex: 0 0 50%;
 
 
         // &::before {
@@ -267,6 +372,13 @@
         justify-content: center;
         flex-direction: column;
         padding: 10rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+
+        &__title {
+            font-size: 4rem !important;
+            color: #dc4225;
+        }
     }  
 
 
@@ -274,18 +386,23 @@
 
 .petition {
     background-color: orange;
-    padding: 10rem 40rem;
+    padding: 10rem;
 
 
 
     &__header {
+        padding: 3rem;
+        margin: 0 20rem;
 
         &__title {
-            
+            background-color: #8FD6F7;
+            color: #fff;
+            padding: 3rem 5rem;
         }
 
         &__verbiage {
-
+            background-color: rgba(255,255,255,.4);
+            padding: 3rem;
         }
     }
     
@@ -296,7 +413,16 @@
         justify-content: center;
     }
     &__content {
-        width: 100%;
+        padding: 0rem 15rem;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+
+        button {
+            width: 30rem;
+        }
     }
 
 

@@ -1,5 +1,7 @@
 $color-primary: #454545;
 $color-grey:green;
+$color-orange: rgba(237, 70, 48, 1);
+
 
 * {
     margin: 0;
@@ -18,12 +20,16 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.6;
     background-size: cover;
     background-repeat: no-repeat;
 
     height: 100vh;
+}
+
+.form__input {
+    width: 100% !important;
 }
 

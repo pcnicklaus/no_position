@@ -12,12 +12,15 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }
+
+.form__input {
+  width: 100% !important; }
 
 h1 {
   font-size: 6rem !important;
@@ -25,8 +28,7 @@ h1 {
 
 h2 {
   font-size: 5rem !important;
-  font-weight: 900;
-  color: orangered; }
+  font-weight: 900; }
 
 h3 {
   font-size: 4rem !important;
@@ -151,11 +153,11 @@ h6 {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 23rem;
-  width: 28rem;
-  margin: .5rem; }
+  height: 30rem;
+  width: 30rem;
+  margin: .5rem 0; }
   .card__side {
-    height: 23rem;
+    height: 30rem;
     transition: all .8s ease;
     position: absolute;
     top: 0;
@@ -182,7 +184,7 @@ h6 {
   .card:hover .card__side--back {
     transform: rotateY(0); }
   .card__heading {
-    font-size: 2.8rem;
+    font-size: 2.8rem !important;
     font-weight: 300;
     text-transform: uppercase;
     text-align: right;
@@ -224,7 +226,8 @@ h6 {
 
 .header {
   background-image: url("../img/standing_go.jpeg");
-  line-height: 1; }
+  line-height: 1;
+  height: 100vh; }
   .header__verbiage {
     padding: 10rem 50rem 0 10rem; }
   .header__subhead {
@@ -234,69 +237,103 @@ h6 {
     max-width: 60rem; }
 
 .why {
-  padding: 5rem;
-  background-image: linear-gradient(to bottom right, #fff, #f7f7f7);
-  color: black; }
+  padding: 10rem 30rem;
+  background-image: linear-gradient(to bottom, #fff, transparent), url("../img/mic__reduced.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white; }
   .why img {
-    height: 10rem; }
+    height: 7rem;
+    margin: 1rem 0; }
   .why__main {
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
   .why__intro {
     flex: 0 0 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem 2rem; }
+    padding: 2rem 2rem;
+    background-color: #ed4630; }
+  .why__title {
+    font-size: 6rem !important; }
   .why__subhead {
-    display: flex; }
+    display: flex;
+    flex: 0 0 50%; }
   .why__content {
-    flex: 0 0 60%; }
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    padding: 2rem 5rem;
+    color: darkslategrey; }
+    .why__content__box {
+      display: flex;
+      justify-content: space-between; }
     .why__content__header {
       display: flex;
       padding: 1rem 0;
       border-bottom: 1px solid grey; }
     .why__content__left {
-      flex: 0 0 50%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center; }
-    .why__content__right {
-      flex: 0 0 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+      display: flex; }
     .why__content__issue {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       margin: 2rem 0;
-      border-radius: 3px;
-      background-color: #f9f9f4; }
+      border-radius: 3px; }
+      .why__content__issue__issue {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .why__content__issue__issue h5 {
+          font-size: 2rem !important; }
+      .why__content__issue__position {
+        font-size: 2.2rem !important;
+        font-weight: 300; }
+  .why__outro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem; }
+    .why__outro__title {
+      width: 100%;
+      padding: 2rem;
+      background-color: #ed4630;
+      text-align: center; }
+    .why__outro__content {
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 3rem 5rem;
+      color: darkslategray;
+      width: 100%; }
+      .why__outro__content__body {
+        font-size: 1.5rem !important; }
 
 .myJob {
   padding: 5rem 5rem 15rem 5rem;
-  background-color: #f1f1f1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Capitol_Building_Full_View.jpg");
+  background-image: url("../img/image__job.jpeg");
   background-position: center;
   background-size: cover; }
   .myJob:before {
     background-image: linear-gradient(to bottom right, #002f4b, #dc4225); }
-  .myJob__title {
-    display: flex;
-    justify-content: center; }
-  .myJob__subhead {
-    text-align: center;
-    padding: 0 15rem;
-    margin-bottom: 5rem; }
-  .myJob hr {
-    width: 15%;
-    margin: -5px auto 2rem auto;
-    background-color: orangered; }
+  .myJob__header {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 25rem;
+    color: darkslategray; }
+    .myJob__header__title {
+      display: flex;
+      justify-content: center;
+      background-color: #6c6ea0;
+      color: white; }
+    .myJob__header__subhead {
+      text-align: center;
+      padding: 3rem 15rem; }
   .myJob__content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 5rem 10rem; }
+    padding: 5rem 21rem; }
   .myJob__box {
     height: 20rem;
     margin-bottom: 2rem;
@@ -307,14 +344,31 @@ h6 {
       display: flex; }
 
 .howWhat {
-  padding: 0 10rem 5rem 10rem; }
+  padding: 0 20rem 5rem 20rem; }
+  .howWhat__intro {
+    margin: 5rem 10rem;
+    display: flex;
+    flex-direction: column; }
+    .howWhat__intro__title {
+      text-align: center;
+      background-color: #6c6ea0;
+      color: white; }
+      .howWhat__intro__title__verbiage {
+        padding: 3rem 0; }
+    .howWhat__intro__subhead {
+      text-align: center;
+      padding: 3rem 15rem;
+      color: darkslategray;
+      background-color: rgba(255, 255, 255, 0.8); }
   .howWhat__title {
     text-align: center;
     margin-top: 10rem; }
   .howWhat__reason {
     display: flex;
-    min-height: 50rem;
-    min-width: 50rem; }
+    min-height: 40rem;
+    min-width: 30rem; }
+  .howWhat__last_one {
+    margin-top: -5rem; }
   .howWhat__transparency {
     background-image: url("../img/transparency-2.jpg");
     background-size: cover;
@@ -324,7 +378,9 @@ h6 {
     background-image: url("../img/Stakeholder-Engagement.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative; }
+    position: relative;
+    display: flex;
+    flex: 0 0 50%; }
   .howWhat__fundraising {
     background-image: url("../img/fundraising_cut.png");
     background-size: cover;
@@ -339,16 +395,36 @@ h6 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 10rem; }
+    padding: 10rem;
+    font-size: 1.5rem;
+    font-weight: 300; }
+    .howWhat__right__title {
+      font-size: 4rem !important;
+      color: #dc4225; }
 
 .petition {
   background-color: orange;
-  padding: 10rem 40rem; }
+  padding: 10rem; }
+  .petition__header {
+    padding: 3rem;
+    margin: 0 20rem; }
+    .petition__header__title {
+      background-color: #8FD6F7;
+      color: #fff;
+      padding: 3rem 5rem; }
+    .petition__header__verbiage {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 3rem; }
   .petition__title {
     display: flex;
     justify-content: center; }
   .petition__content {
-    width: 100%; }
+    padding: 0rem 15rem; }
+  .petition__button {
+    display: flex;
+    justify-content: center; }
+    .petition__button button {
+      width: 30rem; }
 
 .footer {
   background-color: darkgray;
